@@ -39,15 +39,15 @@ export default async function Home() {
         <p>
           Powered by{" "}
           <Link href="https://turso.tech/" className="underline">
-            turso
+            Turso
           </Link>
           ,{" "}
           <Link href="https://nextjs.org/" className="underline">
-            next.js
+            Next.js
           </Link>
           , and{" "}
           <Link href="https://tailwindcss.com/" className="underline">
-            tailwindcss
+            TailwindCSS
           </Link>
         </p>
         <p className="text-balance">
@@ -57,7 +57,12 @@ export default async function Home() {
           </Link>
           , the best archive of GIFs on the internet
         </p>
-        <p>Built by Jon Heslop</p>
+        <p>
+          Thrown together by{" "}
+          <Link className="underline" href="https://jonheslop.com/">
+            Jon Heslop
+          </Link>
+        </p>
       </footer>
     </div>
   );
