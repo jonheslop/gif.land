@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const Footer = () => (
-  <footer className="row-start-3 flex gap-4 lg:gap-12 flex-wrap items-center justify-center text-sm text-center">
-    <p>
+  <footer className="row-start-3 flex gap-4 lg:gap-12 flex-wrap items-center text-sm xl:grid grid-cols-3 2xl:grid-cols-8">
+    <p className="2xl:col-span-3">
       Powered by{" "}
       <Link href="https://turso.tech/" className="underline">
         Turso
@@ -16,14 +16,14 @@ export const Footer = () => (
         TailwindCSS
       </Link>
     </p>
-    <p className="text-balance">
+    <p className="text-balance 2xl:col-span-3">
       Thanks to <Link href="https://ethanmarcotte.com/">Ethan</Link> for{" "}
       <Link href="https://bukk.it/" className="underline">
         bukk.it
       </Link>
       , the best archive of GIFs on the internet
     </p>
-    <p>
+    <p className="2xl:col-span-2">
       Thrown together by me,{" "}
       <Link className="underline" href="https://jonheslop.com/">
         Jon Heslop
