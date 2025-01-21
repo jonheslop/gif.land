@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${soehne.variable} font-soehne antialiased text-neutral-800`}
+        className={`${soehne.variable} font-soehne antialiased text-neutral-800 dark:text-neutral-100`}
       >
         <div className="flex flex-col min-h-screen p-8 gap-8">
           <Header />
