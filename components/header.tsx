@@ -2,7 +2,7 @@ import Link from "next/link";
 import { NavLink } from "@/components/nav-link";
 
 export const Header = () => (
-  <nav role="navigation" className="flex justify-between gap-6">
+  <nav role="navigation" className="flex flex-col md:flex-row justify-between gap-6">
     <h1>
       Jon’s{" "}
       <Link
