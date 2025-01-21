@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NavLink } from "@/components/nav-link";
 
 export const Header = () => (
   <nav role="navigation" className="flex justify-between gap-6">
@@ -11,9 +12,15 @@ export const Header = () => (
       <span className="ml-3">｡◕‿◕｡</span>
     </h1>
 
-    <ul>
+    <ul className="flex gap-4">
       <li>
-        <Link href="#">A-Z</Link>
+        <NavLink href="/">A-Z</NavLink>
+      </li>
+      <li>
+        <NavLink href="/newest">Newest</NavLink>
+      </li>
+      <li>
+        <NavLink href="/oldest">Oldest</NavLink>
       </li>
     </ul>
   </nav>
