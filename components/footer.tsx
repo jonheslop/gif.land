@@ -24,7 +24,13 @@ export const Footer = () => (
       , the best archive of GIFs on the internet
     </p>
     <p className="2xl:col-span-2">
-      Thrown together by me,{" "}
+      <Link
+        className="underline"
+        href="https://github.com/jonheslop/bukkit-faves"
+      >
+        Thrown together
+      </Link>{" "}
+      by me,{" "}
       <Link className="underline" href="https://jonheslop.com/">
         Jon Heslop
       </Link>
