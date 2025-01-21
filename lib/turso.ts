@@ -5,3 +5,10 @@ export const turso = createClient({
   authToken: process.env.TURSO_AUTH_TOKEN,
 });
 
+export type fave = {
+  id: number;
+  created_at: string;
+  url: string;
+  author: string;
+  tags: string;
+};
