@@ -5,8 +5,7 @@ import { turso, type fave } from "@/lib/turso";
 
 export default async function Home() {
   const { rows } = await turso.execute("SELECT * FROM favourites");
-
-  console.log(rows);
+  const faves = rows as fave[]; // cop out but whatever
 
   return (
     <div className="flex flex-col min-h-screen p-8 gap-16 font-[family-name:var(--font-geist-sans)]">
@@ -21,14 +20,16 @@ export default async function Home() {
       </nav>
       <main className="flex-1">
         <ul className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {rows.map((row) => (
+          {faves.map((row) => (
             <li key={row.id} className="flex flex-col gap-2">
-              <Image
-                src={`https://bukk.it/${row.url}`}
-                width={300}
-                height={300}
-                alt={row.url}
-              />
+              <Link target="_blank" href={`https://bukk.it/${row.url}`}>
+                <Image
+                  src={`https://bukk.it/${row.url}`}
+                  width={300}
+                  height={300}
+                  alt={row.url}
+                />
+              </Link>
               <p className="text-neutral-600">Tags: {row.tags}</p>
             </li>
           ))}
