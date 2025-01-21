@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const soehne = localFont({
@@ -32,7 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${soehne.variable} font-soehne antialiased`}>
-        {children}
+        <div className="flex flex-col min-h-screen p-8 gap-8">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
