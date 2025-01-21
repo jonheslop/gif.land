@@ -12,7 +12,11 @@ export const Item = ({ item }: { item: fave }) => (
         alt={item.url}
       />
     </Link>
-    <p className="text-sm text-neutral-600">{item.url}</p>
-    <p className="text-sm text-neutral-600">Tags: {item.tags}</p>
+    <div>
+      <p className="text-sm leading-tight">{item.url}</p>
+      <p className="text-sm leading-tight text-neutral-500">
+        Tags: {item.tags}
+      </p>
+    </div>
   </li>
 );
