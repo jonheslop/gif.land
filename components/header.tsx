@@ -7,7 +7,7 @@ export const Header = () => (
       Jon’s{" "}
       <Link
         href="https://bukk.it/"
-        className="underline hover:text-emerald-700 underline-offset-2"
+        className="underline hover:text-emerald-700 hover:dark:text-emerald-500 underline-offset-2"
       >
         bukk.it
       </Link>{" "}
