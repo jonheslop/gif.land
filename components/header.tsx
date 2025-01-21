@@ -5,7 +5,10 @@ export const Header = () => (
   <nav role="navigation" className="flex justify-between gap-6">
     <h1>
       Jon’s{" "}
-      <Link href="https://bukk.it/" className="underline">
+      <Link
+        href="https://bukk.it/"
+        className="underline hover:text-emerald-700 underline-offset-2"
+      >
         bukk.it
       </Link>{" "}
       faves
