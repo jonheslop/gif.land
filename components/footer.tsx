@@ -3,7 +3,11 @@ import Link from "next/link";
 export const Footer = () => (
   <footer className="row-start-3 flex gap-4 mt-16 lg:gap-12 xl:gap-8 flex-wrap items-center text-sm xl:grid grid-cols-3 2xl:grid-cols-8">
     <p className="text-balance 2xl:col-span-3">
-      Thanks to <Link href="https://ethanmarcotte.com/">Ethan</Link> for{" "}
+      Thanks to{" "}
+      <Link href="https://ethanmarcotte.com/" className="underline">
+        Ethan
+      </Link>{" "}
+      for{" "}
       <Link href="https://bukk.it/" className="underline">
         bukk.it
       </Link>
