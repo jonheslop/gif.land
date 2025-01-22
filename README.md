@@ -1,6 +1,6 @@
 # Bukk.it faves
 
-I love [bukk.it](https://bukk.it) but I always forget the filenames of my faves, so I’ve made this to store my faves with extra tags.
+I love [bukk.it](https://bukk.it) ([thanks Ethan!](https://ethanmarcotte.com/)) but I always forget the filenames of my faves, so I’ve made this to store my faves with extra tags.
 
 I can add new faves from the command line using [Turso’s CLI](https://docs.turso.tech/cli/db/shell):
 
