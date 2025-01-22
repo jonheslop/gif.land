@@ -20,13 +20,13 @@ export const Header = () => (
 
     <ul className="flex gap-4 text-sm md:text-base">
       <li>
-        <NavLink href="/">A-Z</NavLink>
+        <NavLink href="/">a-z</NavLink>
       </li>
       <li>
-        <NavLink href="/newest">Newest</NavLink>
+        <NavLink href="/newest">newest</NavLink>
       </li>
       <li>
-        <NavLink href="/oldest">Oldest</NavLink>
+        <NavLink href="/oldest">oldest</NavLink>
       </li>
     </ul>
   </nav>
