@@ -7,8 +7,8 @@ export const Item = ({ item }: { item: fave }) => (
     <Link target="_blank" href={`https://bukk.it/${item.url}`}>
       <Image
         src={`https://bukk.it/${item.url}`}
-        width={300}
-        height={300}
+        width={400}
+        height={400}
         alt={item.url}
       />
     </Link>
