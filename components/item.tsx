@@ -14,7 +14,15 @@ export const Item = ({ item }: { item: fave }) => (
       />
     </Link>
     <div>
-      <p className="text-sm leading-tight">{item.url}</p>
+      <p className="text-sm leading-tight">
+        <Link
+          className="underline"
+          target="_blank"
+          href={`https://bukk.it/${item.url}`}
+        >
+          {item.url}
+        </Link>
+      </p>
       <p className="text-sm leading-tight text-neutral-500">
         Tags: {item.tags}
       </p>
