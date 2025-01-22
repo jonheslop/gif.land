@@ -10,6 +10,7 @@ export const Item = ({ item }: { item: fave }) => (
         width={400}
         height={400}
         alt={item.url}
+        unoptimized={item.url.includes(".gif")}
       />
     </Link>
     <div>
