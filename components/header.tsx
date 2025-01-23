@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NavLink } from "@/components/nav-link";
+import { Search } from "./search";
 
 export const Header = () => (
   <nav
@@ -15,7 +16,9 @@ export const Header = () => (
         bukk.it
       </Link>{" "}
       faves
-      <span className="ml-3">｡◕‿◕｡</span>
+      <Link href="/" className="ml-3">
+        ｡◕‿◕｡
+      </Link>
     </h1>
 
     <ul className="flex gap-4 text-sm md:text-base">
@@ -27,6 +30,9 @@ export const Header = () => (
       </li>
       <li>
         <NavLink href="/oldest">oldest</NavLink>
+      </li>
+      <li>
+        <Search />
       </li>
     </ul>
   </nav>
