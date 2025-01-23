@@ -11,7 +11,9 @@ export const Search = () => {
         type="search"
         placeholder="Search…"
         onChange={(e) => setSearchTerm(e.target.value)}
-        onBlur={(e) => e.target.form?.submit()}
+        onBlur={(e) => {
+          if (searchTerm !== "") e.target.form?.submit();
+        }}
         className="border-b focus:border-neutral-900 ring-0 outline-none appearance-none dark:bg-neutral-950 rounded-none"
       />
     </form>
