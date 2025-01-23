@@ -5,7 +5,7 @@ import { Search } from "./search";
 export const Header = () => (
   <nav
     role="navigation"
-    className="flex flex-col md:flex-row justify-between gap-6"
+    className="flex flex-col md:flex-row justify-between gap-3 lg:gap-6 sticky top-0 bg-white pt-2 lg:pt-8"
   >
     <h1>
       Jon’s{" "}
