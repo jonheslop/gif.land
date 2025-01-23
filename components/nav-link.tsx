@@ -15,7 +15,11 @@ export const NavLink = ({
   return (
     <Link
       href={href}
-      className={currentRoute === href ? "border-b border-neutral-800" : ""}
+      className={
+        currentRoute === href
+          ? "border-b border-neutral-800 hover:text-emerald-700 hover:dark:text-emerald-500"
+          : "hover:text-emerald-700 hover:dark:text-emerald-500"
+      }
     >
       {children}
     </Link>

@@ -18,7 +18,7 @@ export const Item = ({ item }: { item: fave }) => {
       <div>
         <p className="text-sm leading-tight">
           <Link
-            className="underline"
+            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
             target="_blank"
             href={`https://bukk.it/${item.url}`}
           >
