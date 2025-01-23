@@ -25,7 +25,7 @@ export const Item = ({ item }: { item: fave }) => {
             {item.url}
           </Link>
         </p>
-        <p className="text-sm leading-tight text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm leading-tight text-neutral-500 dark:text-neutral-400 mt-0.5">
           Tags:{" "}
           {tags.map((tag, index) => (
             <Link
