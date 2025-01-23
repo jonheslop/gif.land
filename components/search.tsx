@@ -12,7 +12,7 @@ export const Search = () => {
         placeholder="Search…"
         onChange={(e) => setSearchTerm(e.target.value)}
         onBlur={(e) => e.target.form?.submit()}
-        className="border-b focus:border-neutral-900 ring-0 outline-none appearance-none"
+        className="border-b focus:border-neutral-900 ring-0 outline-none appearance-none dark:bg-neutral-950"
       />
     </form>
   );
