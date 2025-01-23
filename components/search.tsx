@@ -7,7 +7,11 @@ export const Search = () => {
 
   return (
     <form action={`/search/${searchTerm}`}>
+      <label htmlFor="search" className="sr-only">
+        Search
+      </label>
       <input
+        id="search"
         type="search"
         placeholder="Search…"
         onChange={(e) => setSearchTerm(e.target.value)}
