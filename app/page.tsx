@@ -11,6 +11,7 @@ const getCachedResults = unstable_cache(
   },
   ["faves"],
   {
+    revalidate: 3600,
     tags: ["faves"],
   },
 );
