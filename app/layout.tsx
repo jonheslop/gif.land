@@ -41,7 +41,17 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen !pt-0 p-2 sm:px-4 lg:p-8 gap-8">
           <Header />
           <main className="flex-1">
-            <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+            <Suspense
+              fallback={
+                <p className="mt-8 text-3xl text-neutral-500 animate-pulse tracking-tight leading-relaxed">
+                  ᕙ( ~ . ~ )ᕗ
+                  <br />
+                  Fetching the images&hellip;
+                </p>
+              }
+            >
+              {children}
+            </Suspense>
           </main>
           <Footer />
         </div>
