@@ -8,7 +8,5 @@ export default async function Home() {
   // @ts-expect-error cba to sort right now
   const faves: fave[] = rows;
 
-  return (
-      <Grid faves={faves} />
-  );
+  return <Grid faves={faves} />;
 }
