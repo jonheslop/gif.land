@@ -18,7 +18,7 @@ export const Search = () => {
         onBlur={(e) => {
           if (searchTerm !== "") e.target.form?.submit();
         }}
-        className="border-b focus:border-neutral-900 ring-0 outline-none appearance-none dark:bg-neutral-950 rounded-none"
+        className="border-b focus:border-neutral-900 ring-0 outline-none appearance-none bg-transparent rounded-none placeholder:text-neutral-950 focus:placeholder:text-neutral-600"
       />
     </form>
   );

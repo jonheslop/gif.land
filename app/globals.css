@@ -5,3 +5,14 @@
 body {
   font-feature-settings: "ss02" 1;
 }
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  border-radius: 4px;
+  background: hsl(0deg 0% 100% / 0.1);
+  pointer-events: none;
+  backdrop-filter: blur(16px);
+  mask-image: linear-gradient(to bottom, black 0, black 50%, transparent 50%);
+}
