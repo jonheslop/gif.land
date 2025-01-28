@@ -1,6 +1,5 @@
 import { turso, type fave } from "@/lib/turso";
 import { Grid } from "@/components/grid";
-import { Item } from "@/components/item";
 
 // SELECT * FROM favourites WHERE URL LIKE '%dog%' OR TAGS LIKE '%dog%';
 
@@ -24,11 +23,7 @@ export default async function Home({
       <p className="mb-8">
         Search results for: <em>{decodedQuery}</em>
       </p>
-      <Grid>
-        {faves.map((row) => (
-          <Item key={row.id} item={row} />
-        ))}
-      </Grid>
+      <Grid faves={faves} />
     </>
   );
 }
