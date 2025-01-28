@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import "./globals.css";
-import { Suspense } from "react";
 
 const soehne = localFont({
   src: [
