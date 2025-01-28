@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const soehne = localFont({
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Analytics />
         </div>
       </body>
     </html>
