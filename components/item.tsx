@@ -16,7 +16,7 @@ export const Item = ({ item }: { item: fave }) => {
         />
       </Link>
       <div>
-        <p className="text-sm leading-tight">
+        <p className="text-sm leading-tight truncate" title={item.url}>
           <Link
             className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
             target="_blank"
