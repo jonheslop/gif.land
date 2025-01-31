@@ -7,7 +7,11 @@ export const Header = () => (
     role="navigation"
     className="flex flex-col md:flex-row justify-between gap-3 lg:gap-6 sticky top-0 bg-white dark:bg-neutral-950 pt-2 lg:pt-8"
   >
-    <h1>
+    <Link href="/" className="">
+      ｡◕‿◕｡
+    </Link>
+
+    <h1 className="mr-auto">
       Jon’s{" "}
       <Link
         href="https://bukk.it/"
@@ -16,9 +20,6 @@ export const Header = () => (
         bukk.it
       </Link>{" "}
       faves
-      <Link href="/" className="ml-3">
-        ｡◕‿◕｡
-      </Link>
     </h1>
 
     <ul className="flex gap-4 text-sm md:text-base">
