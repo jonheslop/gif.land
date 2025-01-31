@@ -22,6 +22,13 @@ export const Footer = () => (
     <p className="2xl:col-span-3">
       Powered by{" "}
       <Link
+        href="https://bukk.it/"
+        className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
+      >
+        bukk.it
+      </Link>
+      ,{" "}
+      <Link
         href="https://turso.tech/"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
       >
