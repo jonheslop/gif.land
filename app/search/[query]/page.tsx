@@ -15,8 +15,7 @@ export default async function Home({
   const { rows } = await turso.execute(
     `SELECT * FROM favourites WHERE URL LIKE '%${decodedQuery}%' OR TAGS LIKE '%${decodedQuery}%'`,
   );
-  // @ts-expect-error cba to sort right now
-  const faves: fave[] = rows;
+  const faves = rows as fave[];
 
   return (
     <>

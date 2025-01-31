@@ -5,8 +5,7 @@ export default async function Home() {
   const { rows } = await turso.execute(
     "SELECT * FROM favourites ORDER BY url ASC",
   );
-  // @ts-expect-error cba to sort right now
-  const faves: fave[] = rows;
+  const faves = rows as fave[];
 
   return <Grid faves={faves} />;
 }
