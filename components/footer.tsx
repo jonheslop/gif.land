@@ -52,7 +52,7 @@ export const Footer = () => (
     <p className="2xl:col-span-2">
       <Link
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-        href="https://github.com/jonheslop/bukkit-faves"
+        href="https://github.com/jonheslop/gif.land"
       >
         Thrown together
       </Link>{" "}
