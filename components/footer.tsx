@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export const Footer = () => (
-  <footer className="row-start-3 flex gap-4 mt-16 lg:gap-12 xl:gap-8 flex-wrap items-center text-sm xl:grid grid-cols-3 2xl:grid-cols-8">
-    <p className="text-balance 2xl:col-span-3">
+  <footer className="row-start-3 flex gap-4 lg:mt-32 my-16 lg:gap-12 xl:gap-4 2xl:gap-8 flex-wrap items-start text-sm xl:grid grid-cols-3 2xl:grid-cols-8">
+    <p className="text-pretty 2xl:col-span-3 xl:pr-16">
       Thanks to{" "}
       <Link
         href="https://ethanmarcotte.com/wrote/bukkit/"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
       >
-        Ethan for the inspo
+        Ethan for the inspiration
       </Link>{" "}
       and for{" "}
       <Link
@@ -17,7 +17,7 @@ export const Footer = () => (
       >
         bukk.it
       </Link>
-      , the best GIF archive around
+      , the best GIF archive on the internet
     </p>
     <p className="2xl:col-span-3">
       Powered by{" "}
@@ -48,6 +48,21 @@ export const Footer = () => (
       >
         TailwindCSS
       </Link>
+      <br />
+      Set in{" "}
+      <Link
+        className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
+        href="https://klim.co.nz/collections/soehne/"
+      >
+        Söhne
+      </Link>{" "}
+      by{" "}
+      <Link
+        className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
+        href="https://klim.co.nz/"
+      >
+        Klim Type Foundry
+      </Link>
     </p>
     <p className="2xl:col-span-2">
       <Link
@@ -63,6 +78,7 @@ export const Footer = () => (
       >
         Jon Heslop
       </Link>
+      <br />
     </p>
   </footer>
 );
