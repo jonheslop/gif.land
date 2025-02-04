@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "bukk.it",
+        hostname: "gif.land",
         port: "",
         pathname: "/**",
         search: "",

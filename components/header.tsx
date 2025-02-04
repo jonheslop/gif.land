@@ -12,14 +12,12 @@ export const Header = () => (
     </Link>
 
     <h1 className="mr-auto">
-      Jon’s{" "}
       <Link
-        href="https://bukk.it/"
+        href="https://gif.land/"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500 underline-offset-2"
       >
-        bukk.it
-      </Link>{" "}
-      faves
+        Jon’s gif.land
+      </Link>
     </h1>
 
     <ul className="flex gap-4 text-sm md:text-base">

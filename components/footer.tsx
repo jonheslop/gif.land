@@ -22,10 +22,10 @@ export const Footer = () => (
     <p className="2xl:col-span-3">
       Powered by{" "}
       <Link
-        href="https://bukk.it/"
+        href="https://www.cloudflare.com/en-gb/developer-platform/products/r2/"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
       >
-        bukk.it
+        Cloudflare R2
       </Link>
       ,{" "}
       <Link
