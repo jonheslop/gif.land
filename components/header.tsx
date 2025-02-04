@@ -5,18 +5,15 @@ import { Search } from "./search";
 export const Header = () => (
   <nav
     role="navigation"
-    className="flex flex-col md:flex-row justify-between gap-3 lg:gap-6 sticky top-0 bg-white dark:bg-neutral-950 pt-2 lg:pt-8"
+    className="flex flex-col md:flex-row items-end justify-between gap-3 sticky top-0 bg-white dark:bg-neutral-950 pt-2"
   >
-    <Link href="/" className="">
-      ｡◕‿◕｡
-    </Link>
-
     <h1 className="mr-auto">
       <Link
-        href="https://gif.land/"
-        className="underline hover:text-emerald-700 hover:dark:text-emerald-500 underline-offset-2"
+        href="/"
+        className="flex flex-col gap-1 hover:text-emerald-700 hover:dark:text-emerald-500"
       >
-        Jon’s gif.land
+        <span>｡◕‿◕｡</span>
+        <span className="underline underline-offset-2">gif.land</span>
       </Link>
     </h1>
 

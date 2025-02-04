@@ -22,7 +22,7 @@ const soehne = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Jon’s gif.land",
+  title: "gif.land",
   description: "My online memory bank of my favourite gifs",
 };
 
