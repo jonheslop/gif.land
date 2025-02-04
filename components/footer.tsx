@@ -5,19 +5,19 @@ export const Footer = () => (
     <p className="text-balance 2xl:col-span-3">
       Thanks to{" "}
       <Link
-        href="https://ethanmarcotte.com/"
+        href="https://ethanmarcotte.com/wrote/bukkit/"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
       >
-        Ethan
+        Ethan for the inspo
       </Link>{" "}
-      for{" "}
+      and for{" "}
       <Link
         href="https://bukk.it/"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
       >
         bukk.it
       </Link>
-      , the best archive of GIFs on the internet
+      , the best GIF archive around
     </p>
     <p className="2xl:col-span-3">
       Powered by{" "}
