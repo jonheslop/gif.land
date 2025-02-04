@@ -10,5 +10,4 @@ I can add new faves from the command line using [Turso’s CLI](https://docs.tur
 
 I plan to make it so I can add my own GIFs too and store them on Cloudflare (like the images on my blog)
 
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+I blogged about making it here https://jonheslop.com/posts/2025/gif-land
