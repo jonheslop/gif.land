@@ -6,6 +6,19 @@ body {
   font-feature-settings: "ss02" 1;
 }
 
+@keyframes flash {
+  0% {
+    background-color: oklch(0.905 0.182 98.111);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.flash:focus {
+  animation: flash 0.75s ease-out;
+}
+
 @keyframes colourwheel {
   0%,
   10% {
