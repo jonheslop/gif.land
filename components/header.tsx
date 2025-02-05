@@ -10,9 +10,9 @@ export const Header = () => (
     <h1 className="mr-auto">
       <Link
         href="/"
-        className="flex flex-col gap-1 hover:text-emerald-700 hover:dark:text-emerald-500"
+        className="flex flex-col gap-1 hover:text-emerald-700 hover:dark:text-emerald-500 colourwheel"
       >
-        <span className="colourwheel">｡◕‿◕｡</span>
+        ｡◕‿◕｡
         <span className="underline underline-offset-2">gif.land</span>
       </Link>
     </h1>
