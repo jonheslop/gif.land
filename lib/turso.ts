@@ -13,4 +13,5 @@ export type fave = Row & {
   tags: string;
   width: number;
   height: number;
+  Source: string;
 };
