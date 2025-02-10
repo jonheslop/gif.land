@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="py-16 xl:py-32 flex flex-col md:flex-row gap-4 lg:gap-8">
+    <div className="py-16 2xl:py-32 flex flex-col md:flex-row gap-4 lg:gap-8">
       <figure>
         <Image
           src="https://gif.land/plagued-by-concepts.jpg"
