@@ -43,10 +43,10 @@ export const Footer = () => (
       </Link>
       , and{" "}
       <Link
-        href="https://tailwindcss.com/"
+        href="https://github.com/partykit/cursor-party"
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
       >
-        TailwindCSS
+        Cursor Party
       </Link>
       <br />
       Set in{" "}
