@@ -25,6 +25,10 @@ const soehne = localFont({
 export const metadata: Metadata = {
   title: "gif.land",
   description: "My online memory bank of my favourite gifs",
+  openGraph: {
+    siteName: "gif.land",
+    url: "https://gif.land",
+  },
 };
 
 export default function RootLayout({
