@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { StyledLink as Link } from "./link";
 
 export const Footer = () => (
   <footer className="row-start-3 lg:mt-32 mt-16 flex-wrap items-start text-sm">

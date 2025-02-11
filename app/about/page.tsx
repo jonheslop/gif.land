@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { StyledLink as Link } from "@/components/link";
 import Image from "next/image";
 
 export default function About() {
@@ -13,11 +13,7 @@ export default function About() {
           priority={true}
         />
         <figcaption className="text-sm flex flex-col">
-          <Link
-            target="_blank"
-            className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://gif.land/plagued-by-concepts.jpg"
-          >
+          <Link target="_blank" href="https://gif.land/plagued-by-concepts.jpg">
             plagued-by-concepts.jpg
           </Link>
         </figcaption>
@@ -29,17 +25,13 @@ export default function About() {
         <h2 className="text-2xl">gif.land?</h2>
         <p className="my-4 text-pretty">
           I (
-          <Link
-            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://jonheslop.com/"
-          >
+          <Link target="_blank" href="https://jonheslop.com/">
             Jon Heslop
           </Link>
           ) made this site as an easy way to get urls to the gifs that I love.
           Also just because it’s fun to make websites. I wrote a little more
           about it on{" "}
           <Link
-            className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
             href="https://jonheslop.com/posts/2025/gif-land"
             target="_blank"
           >
@@ -49,17 +41,11 @@ export default function About() {
         </p>
         <p className="text-pretty 2xl:col-span-3 xl:pr-16">
           Thanks to{" "}
-          <Link
-            href="https://ethanmarcotte.com/wrote/bukkit/"
-            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-          >
+          <Link target="_blank" href="https://ethanmarcotte.com/wrote/bukkit/">
             Ethan for the inspiration
           </Link>{" "}
           and for{" "}
-          <Link
-            href="https://bukk.it/"
-            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-          >
+          <Link target="_blank" href="https://bukk.it/">
             bukk.it
           </Link>
           , the best GIF archive on the internet.
@@ -70,42 +56,35 @@ export default function About() {
         <ul className="list-disc list-inside ml-1">
           <li>
             <Link
+              target="_blank"
               href="https://www.cloudflare.com/en-gb/developer-platform/products/r2/"
-              className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
             >
               Cloudflare R2
             </Link>{" "}
             <em>— to host the images</em>
           </li>
           <li>
-            <Link
-              href="https://turso.tech/"
-              className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-            >
+            <Link target="_blank" href="https://turso.tech/">
               Turso
             </Link>{" "}
             <em>— an SQLite database to query the images and tag metadata</em>
           </li>
           <li>
-            <Link
-              href="https://nextjs.org/"
-              className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-            >
+            <Link target="_blank" href="https://nextjs.org/">
               Next.js
             </Link>{" "}
             <em>— to power home.gif.land</em>
           </li>
           <li>
             <Link
+              target="_blank"
               href="https://github.com/partykit/cursor-party"
-              className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
             >
               Cursor Party
             </Link>{" "}
             <em>
               — because{" "}
               <Link
-                className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
                 href="https://interconnected.org/home/2024/09/05/cursor-party"
                 target="_blank"
               >
@@ -116,26 +95,17 @@ export default function About() {
         </ul>
         <p className="my-4 text-pretty">
           Typeset in{" "}
-          <Link
-            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://klim.co.nz/collections/soehne/"
-          >
+          <Link target="_blank" href="https://klim.co.nz/collections/soehne/">
             Söhne
           </Link>{" "}
           by{" "}
-          <Link
-            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://klim.co.nz/"
-          >
+          <Link target="_blank" href="https://klim.co.nz/">
             Klim Type Foundry.
           </Link>
         </p>
         <p className="my-4 text-pretty">
           You can see/fork the code over on{" "}
-          <Link
-            className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://github.com/jonheslop/gif.land"
-          >
+          <Link target="_blank" href="https://github.com/jonheslop/gif.land">
             Github
           </Link>
           .

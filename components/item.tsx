@@ -1,6 +1,6 @@
 import { fave } from "@/lib/turso";
 import Image from "next/image";
-import Link from "next/link";
+import { StyledLink as Link } from "./link";
 
 export const Item = ({ item }: { item: fave }) => {
   const tags = item.tags.split(", ");
@@ -17,11 +17,7 @@ export const Item = ({ item }: { item: fave }) => {
       </Link>
       <div>
         <p className="text-sm leading-tight truncate" title={item.url}>
-          <Link
-            className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-            target="_blank"
-            href={`https://gif.land/${item.url}`}
-          >
+          <Link target="_blank" href={`https://gif.land/${item.url}`}>
             {item.url}
           </Link>
         </p>
