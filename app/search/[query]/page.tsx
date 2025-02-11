@@ -1,9 +1,8 @@
 import { turso, type fave } from "@/lib/turso";
 import { Grid } from "@/components/grid";
+import { allFavesToPages } from "@/lib/helpers";
 
-// SELECT * FROM favourites WHERE URL LIKE '%dog%' OR TAGS LIKE '%dog%';
-
-export default async function Home({
+export default async function Search({
   params,
 }: {
   params: Promise<{ query: string }>;
@@ -16,13 +15,14 @@ export default async function Home({
     `SELECT * FROM favourites WHERE URL LIKE '%${decodedQuery}%' OR TAGS LIKE '%${decodedQuery}%'`,
   );
   const faves = rows as fave[];
+  const pagedFaves = allFavesToPages(faves);
 
   return (
     <>
       <p className="mb-8">
         Search results for: <em>{decodedQuery}</em>
       </p>
-      <Grid faves={faves} />
+      <Grid pagedFaves={JSON.parse(JSON.stringify(pagedFaves))} />
     </>
   );
 }
