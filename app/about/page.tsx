@@ -67,7 +67,7 @@ export default function About() {
         <p className="mt-4 mb-2 text-pretty">
           The site uses the following tech:
         </p>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside ml-1">
           <li>
             <Link
               href="https://www.cloudflare.com/en-gb/developer-platform/products/r2/"
