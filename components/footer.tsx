@@ -14,9 +14,9 @@ export const Footer = () => (
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
         href="https://jonheslop.com/"
       >
-        Jon Heslop,
-      </Link>{" "}
-      here’s a{" "}
+        Jon Heslop
+      </Link>
+      . Here’s a{" "}
       <Link
         className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
         href="/about"
