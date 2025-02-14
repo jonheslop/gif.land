@@ -28,7 +28,12 @@ export const Header = () => (
         <NavLink href="/oldest">oldest</NavLink>
       </li>
       <li>
-        <NavLink href="/random">random</NavLink>
+        <a
+          className="underline-offset-2 hover:underline hover:text-emerald-700 hover:dark:text-emerald-500"
+          href="/random"
+        >
+          random
+        </a>
       </li>
       <li>
         <Search />
