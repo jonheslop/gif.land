@@ -1,11 +1,19 @@
-import Link from "next/link";
+"use client";
+
+import { StyledLink as Link } from "../components/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function NotFound() {
+  const pathname = usePathname();
+
+  const lastPath = pathname.split("/").pop();
+
   return (
-    <div className="py-16 xl:py-32 flex flex-col md:flex-row gap-4">
-      <figure>
+    <div className="flex flex-col lg:grid grid-cols-4 gap-4 lg:gap-8 xl:mt-4">
+      <figure className="col-span-4 lg:col-span-3">
         <Image
+          className="w-full"
           src="https://gif.land/plainview-sadness.gif"
           width={500}
           height={205}
@@ -13,38 +21,31 @@ export default function NotFound() {
           unoptimized={true}
         />
         <figcaption className="text-sm flex flex-col">
-          <Link
-            target="_blank"
-            className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://gif.land/plainview-sadness.gif"
-          >
+          <Link target="_blank" href="https://gif.land/plainview-sadness.gif">
             plainview-sadness.gif
           </Link>
           <span className="text-neutral-500">
             Source:{" "}
-            <Link
-              target="_blank"
-              className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-              href="https://iwdrm.tumblr.com/"
-            >
+            <Link target="_blank" href="https://iwdrm.tumblr.com/">
               iwdrm.tumblr.com
             </Link>
           </span>
         </figcaption>
       </figure>
-      <div className="-mt-px">
+      <article className="mt-8 lg:mt-0 self-start bg-neutral-50/20">
         <h3 className="text-sm text-neutral-500 leading-none">Error 404</h3>
-        <h2 className="text-2xl">Page not found</h2>
+        <h1 className="leading-tight text-3xl">Page not found</h1>
         <p className="py-4 text-pretty">
           The file that you’re looking for is not here
         </p>
-        <Link
-          className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-          href="/"
-        >
-          Return home
-        </Link>
-      </div>
+        <p>
+          Search{" "}
+          <Link href={`/search/${lastPath}`}>
+            gif.land for <em>‘{lastPath}’</em>
+          </Link>{" "}
+          or <Link href="/">return home</Link>
+        </p>
+      </article>
     </div>
   );
 }

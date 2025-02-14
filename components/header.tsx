@@ -28,6 +28,9 @@ export const Header = () => (
         <NavLink href="/oldest">oldest</NavLink>
       </li>
       <li>
+        <NavLink href="/random">random</NavLink>
+      </li>
+      <li>
         <Search />
       </li>
     </ul>
