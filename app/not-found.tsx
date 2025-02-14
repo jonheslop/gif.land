@@ -10,9 +10,10 @@ export default function NotFound() {
   const lastPath = pathname.split("/").pop();
 
   return (
-    <div className="py-16 xl:py-32 flex flex-col md:flex-row gap-4">
-      <figure>
+    <div className="flex flex-col lg:grid grid-cols-4 gap-4 lg:gap-8 xl:mt-4">
+      <figure className="col-span-4 lg:col-span-3">
         <Image
+          className="w-full"
           src="https://gif.land/plainview-sadness.gif"
           width={500}
           height={205}
@@ -31,9 +32,9 @@ export default function NotFound() {
           </span>
         </figcaption>
       </figure>
-      <div className="-mt-px">
+      <article className="mt-8 lg:mt-0 self-start bg-neutral-50/20">
         <h3 className="text-sm text-neutral-500 leading-none">Error 404</h3>
-        <h2 className="text-2xl">Page not found</h2>
+        <h1 className="leading-tight text-3xl">Page not found</h1>
         <p className="py-4 text-pretty">
           The file that you’re looking for is not here
         </p>
@@ -44,7 +45,7 @@ export default function NotFound() {
           </Link>{" "}
           or <Link href="/">return home</Link>
         </p>
-      </div>
+      </article>
     </div>
   );
 }
