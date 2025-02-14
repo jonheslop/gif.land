@@ -1,8 +1,5 @@
 import { turso, type fave } from "@/lib/turso";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
 export async function GET() {
   const { rows } = await turso.execute(
     "SELECT * FROM favourites ORDER BY RANDOM() LIMIT 1",
