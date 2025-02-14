@@ -32,7 +32,7 @@ export default function NotFound() {
           </span>
         </figcaption>
       </figure>
-      <article className="mt-8 lg:mt-0 self-start bg-neutral-50/20">
+      <article className="mt-8 lg:mt-0 self-start">
         <h3 className="text-sm text-neutral-500 leading-none">Error 404</h3>
         <h1 className="leading-tight text-3xl">Page not found</h1>
         <p className="py-4 text-pretty">
