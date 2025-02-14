@@ -1,7 +1,14 @@
-import Link from "next/link";
+"use client";
+
+import { StyledLink as Link } from "../components/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function NotFound() {
+  const pathname = usePathname();
+
+  const lastPath = pathname.split("/").pop();
+
   return (
     <div className="py-16 xl:py-32 flex flex-col md:flex-row gap-4">
       <figure>
@@ -13,20 +20,12 @@ export default function NotFound() {
           unoptimized={true}
         />
         <figcaption className="text-sm flex flex-col">
-          <Link
-            target="_blank"
-            className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-            href="https://gif.land/plainview-sadness.gif"
-          >
+          <Link target="_blank" href="https://gif.land/plainview-sadness.gif">
             plainview-sadness.gif
           </Link>
           <span className="text-neutral-500">
             Source:{" "}
-            <Link
-              target="_blank"
-              className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-              href="https://iwdrm.tumblr.com/"
-            >
+            <Link target="_blank" href="https://iwdrm.tumblr.com/">
               iwdrm.tumblr.com
             </Link>
           </span>
@@ -38,12 +37,13 @@ export default function NotFound() {
         <p className="py-4 text-pretty">
           The file that you’re looking for is not here
         </p>
-        <Link
-          className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
-          href="/"
-        >
-          Return home
-        </Link>
+        <p>
+          Search{" "}
+          <Link href={`/search/${lastPath}`}>
+            gif.land for <em>‘{lastPath}’</em>
+          </Link>{" "}
+          or <Link href="/">return home</Link>
+        </p>
       </div>
     </div>
   );

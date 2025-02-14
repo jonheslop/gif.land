@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CopyButton } from "../../../components/copy-button";
 import { Suspense } from "react";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -18,8 +19,7 @@ export default async function Page({
   const item = faves[0];
 
   if (!item) {
-    // TODO: show 404 page
-    return <div>Not found</div>;
+    return notFound();
   }
   const tags = item.tags.split(", ");
 
