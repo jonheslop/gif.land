@@ -1,6 +1,7 @@
 import { fave } from "@/lib/turso";
 import Image from "next/image";
 import { StyledLink as Link } from "./link";
+import React from "react";
 
 export const Item = ({ item }: { item: fave }) => {
   const tags = item.tags.split(", ");
