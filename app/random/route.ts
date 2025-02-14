@@ -10,7 +10,7 @@ export async function GET() {
 
   const fullUrl =
     process.env.NODE_ENV === "production"
-      ? `https://${process.env.VERCEL_URL}/info/${item.url}`
+      ? `https://gif.land/info/${item.url}`
       : `http://localhost:3000/info/${item.url}`;
 
   return Response.redirect(fullUrl);
