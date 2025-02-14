@@ -9,8 +9,8 @@ export const Item = ({ item }: { item: fave }) => {
       <Link target="_blank" href={`https://gif.land/${item.url}`}>
         <Image
           src={`https://gif.land/${item.url}`}
-          width={400}
-          height={400}
+          width={item.width}
+          height={item.height}
           alt={item.url}
           unoptimized={item.url.includes(".gif")}
         />
