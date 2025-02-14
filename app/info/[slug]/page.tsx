@@ -33,7 +33,8 @@ export default async function Page({
         <Image
           className="z-0"
           src={`https://gif.land/${slug}`}
-          fill={true}
+          width={item.width}
+          height={item.height}
           alt={slug}
           unoptimized={slug.includes(".gif")}
         />
@@ -70,18 +71,7 @@ export default async function Page({
               </Link>
             ))}
           </p>
-          <p className="text-neutral-500 dark:text-neutral-400 mt-1">
-            Added by:{" "}
-            <Link href={`#`} className="hover:underline">
-              {item.author}
-            </Link>
-          </p>
-          <p className="text-neutral-500 dark:text-neutral-400 mt-1">
-            Source:{" "}
-            <Link href={`#`} className="hover:underline">
-              {item.Source}
-            </Link>
-          </p>
+
           <CopyButton url={item.url} />
         </article>
       </Suspense>
