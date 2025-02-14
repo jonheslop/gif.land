@@ -24,21 +24,15 @@ export default async function Page({
   const tags = item.tags.split(", ");
 
   return (
-    <div className="flex flex-col lg:grid grid-cols-3 gap-4 mt-8 lg:mt-16">
-      <Link
-        target="_blank"
-        href={`https://gif.land/${slug}`}
-        className="relative col-span-2 aspect-video"
-      >
-        <Image
-          className="z-0"
-          src={`https://gif.land/${slug}`}
-          width={item.width}
-          height={item.height}
-          alt={slug}
-          unoptimized={slug.includes(".gif")}
-        />
-      </Link>
+    <div className="flex flex-col lg:grid grid-cols-4 gap-4 lg:gap-8 xl:mt-4">
+      <Image
+        className="col-span-4 lg:col-span-3 w-full"
+        src={`https://gif.land/${slug}`}
+        width={item.width}
+        height={item.height}
+        alt={slug}
+        unoptimized={slug.includes(".gif")}
+      />
       <Suspense
         fallback={
           <p className="mt-8 text-3xl text-neutral-500 animate-pulse tracking-tight leading-relaxed">
@@ -48,8 +42,8 @@ export default async function Page({
           </p>
         }
       >
-        <article className="-mt-2 z-10 col-start-3 self-start bg-neutral-50/20">
-          <h1 className="leading-tight text-3xl mb-8">
+        <article className="-mt-2 self-start bg-neutral-50/20">
+          <h1 className="leading-tight text-3xl">
             <Link
               className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
               target="_blank"
