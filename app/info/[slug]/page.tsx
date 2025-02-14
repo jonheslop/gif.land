@@ -42,7 +42,7 @@ export default async function Page({
           </p>
         }
       >
-        <article className="-mt-2 self-start bg-neutral-50/20">
+        <article className="-mt-2 self-start">
           <h1 className="leading-tight text-3xl">
             <Link
               className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
