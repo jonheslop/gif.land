@@ -19,6 +19,7 @@ export default function NotFound() {
           height={205}
           alt="https://gif.land/plainview-sadness.gif"
           unoptimized={true}
+          priority={true}
         />
         <figcaption className="text-sm flex flex-col">
           <Link target="_blank" href="https://gif.land/plainview-sadness.gif">

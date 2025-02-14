@@ -32,6 +32,7 @@ export default async function Page({
         height={item.height}
         alt={slug}
         unoptimized={slug.includes(".gif")}
+        priority={true}
       />
       <Suspense
         fallback={
