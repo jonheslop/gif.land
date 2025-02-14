@@ -71,7 +71,6 @@ export default async function Page({
               </Link>
             ))}
           </p>
-
           <CopyButton url={item.url} />
         </article>
       </Suspense>

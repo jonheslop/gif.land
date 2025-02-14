@@ -1,7 +1,5 @@
 import { turso, type fave } from "@/lib/turso";
 
-const url = process.env.VERCEL_URL || "http://localhost:3003";
-
 export async function GET() {
   const { rows } = await turso.execute(
     "SELECT * FROM favourites ORDER BY RANDOM() LIMIT 1",
@@ -10,5 +8,10 @@ export async function GET() {
 
   const item = faves[0];
 
-  return Response.redirect(`${url}/info/${item.url}`);
+  const fullUrl =
+    process.env.NODE_ENV === "production"
+      ? `https://${process.env.VERCEL_URL}/info/${item.url}`
+      : `http://localhost:3000/info/${item.url}`;
+
+  return Response.redirect(fullUrl);
 }
