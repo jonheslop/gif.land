@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="py-16 2xl:py-32 flex flex-col md:flex-row gap-4 lg:gap-8">
+    <div className="py-16 2xl:py-32 flex flex-col md:flex-row gap-16 md:gap-4 lg:gap-8">
       <figure>
         <Image
           src="https://gif.land/plagued-by-concepts.jpg"
@@ -112,7 +112,7 @@ export default function About() {
         </p>
         <p className="my-4 text-pretty">
           You can email me at{" "}
-          <code className="font-mono text-sm bg-neutral-100 px-2 py-1 text-emerald-900">
+          <code className="font-mono text-sm bg-neutral-100 dark:bg-neutral-700 px-2 py-1 text-emerald-900 dark:text-emerald-300">
             webmaster @ gif.land
           </code>
         </p>
