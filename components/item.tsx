@@ -9,6 +9,7 @@ export const Item = ({ item }: { item: fave }) => {
     <li className="flex flex-col gap-2 group">
       <Link target="_blank" href={`https://gif.land/${item.url}`}>
         <Image
+          className="w-full"
           src={`https://gif.land/${item.url}`}
           width={item.width}
           height={item.height}

@@ -39,10 +39,14 @@ export default async function Page({
   }
   const tags = item.tags.split(", ");
 
+  const isPortrait = item.width < item.height;
+
+  const widthLessThan380 = item.width < 380;
+
   return (
     <div className="flex flex-col lg:grid grid-cols-4 gap-4 lg:gap-8 xl:mt-4">
       <Image
-        className="col-span-4 lg:col-span-3 w-full"
+        className={`col-span-4 ${isPortrait ? (widthLessThan380 ? "object-fill lg:col-span-1" : "object-fill lg:col-span-2") : "w-full lg:col-span-3"}`}
         src={`https://gif.land/${slug}`}
         width={item.width}
         height={item.height}
