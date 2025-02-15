@@ -4,6 +4,22 @@ import Link from "next/link";
 import { CopyButton } from "../../../components/copy-button";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
+import type { Metadata, ResolvingMetadata } from "next";
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> },
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const slug = (await params).slug;
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: `${slug} - gif.land`,
+    openGraph: {
+      images: [`https://gif.land/${slug}`, ...previousImages],
+    },
+  };
+}
 
 export default async function Page({
   params,
