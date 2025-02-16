@@ -1,10 +1,10 @@
 import { turso, type fave } from "@/lib/turso";
-import Image from "next/image";
 import Link from "next/link";
 import { CopyButton } from "../../../components/copy-button";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { InfoImage } from "@/components/zoom-button";
 
 export async function generateMetadata({
   params,
@@ -46,15 +46,7 @@ export default async function Page({
 
   return (
     <div className="flex flex-col lg:grid grid-cols-4 gap-4 lg:gap-8 xl:mt-4">
-      <Image
-        className={`col-span-4 ${isPortrait ? (widthLessThan380 ? "object-fill lg:col-span-1" : "object-fill lg:col-span-2") : "w-full lg:col-span-3"}`}
-        src={`https://gif.land/${slug}`}
-        width={item.width}
-        height={item.height}
-        alt={slug}
-        unoptimized={slug.includes(".gif")}
-        priority={true}
-      />
+      <InfoImage item={JSON.parse(JSON.stringify(item))} />
       <Suspense
         fallback={
           <p className="mt-8 text-3xl text-neutral-500 animate-pulse tracking-tight leading-relaxed">
@@ -64,7 +56,9 @@ export default async function Page({
           </p>
         }
       >
-        <article className="-mt-2 self-start">
+        <article
+          className={`mix-blend-difference bg-white/30 p-4 -m-4 -mt-6 rounded self-start ${isPortrait && widthLessThan380 ? "lg:col-start-3" : "lg:col-start-4"}`}
+        >
           <h1 className="leading-tight text-3xl">
             <Link
               className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
