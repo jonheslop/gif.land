@@ -17,7 +17,7 @@ export const CopyButton = ({ url }: { url: string }) => {
       }}
       className="px-2 h-12 pb-px bg-emerald-500 dark:bg-emerald-800 text-white hover:bg-emerald-700 focus:bg-emerald-700 transition-colors mt-4 flex items-center leading-none rounded"
     >
-      {copied ? "Copied!" : "Copy link to clipboard"}
+      {copied ? "copied!" : "copy link to clipboard"}
     </button>
   );
 };

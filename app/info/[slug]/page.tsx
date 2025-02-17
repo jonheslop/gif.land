@@ -57,7 +57,7 @@ export default async function Page({
         }
       >
         <article
-          className={`mix-blend-difference bg-white/30 p-4 -m-4 -mt-6 rounded self-start ${isPortrait && widthLessThan380 ? "lg:col-start-3" : "lg:col-start-4"}`}
+          className={`z-20 mix-blend-difference hover:mix-blend-normal hover:bg-white transition-colors p-4 -m-4 -mt-6 rounded self-start ${isPortrait && widthLessThan380 ? "lg:col-start-3" : "lg:col-start-4"}`}
         >
           <h1 className="leading-tight text-3xl">
             <Link

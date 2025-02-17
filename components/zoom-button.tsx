@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { fave } from "@/lib/turso";
 
@@ -8,6 +8,23 @@ export const InfoImage = ({ item }: { item: fave }) => {
   const [isZoomed, setIsZoomed] = useState(false);
   const isPortrait = item.width < item.height;
   const widthLessThan380 = item.width < 380;
+
+  useEffect(() => {
+    const saved = localStorage.getItem("isZoomed");
+    if (saved === "true") {
+      setIsZoomed(true);
+    }
+  }, []);
+
+  const handleClick = () => {
+    setIsZoomed(!isZoomed);
+
+    if (!isZoomed) {
+      localStorage.setItem("isZoomed", "true");
+    } else {
+      localStorage.removeItem("isZoomed");
+    }
+  };
 
   return (
     <>
@@ -26,17 +43,15 @@ export const InfoImage = ({ item }: { item: fave }) => {
         />
         <button
           className={`absolute top-2 left-2 z-10 px-2 h-12 pb-px bg-emerald-500 dark:bg-emerald-800 text-white hover:bg-emerald-700 focus:bg-emerald-700 transition-colors flex items-center leading-none rounded ${isZoomed ? "mix-blend-difference" : ""}`}
-          onClick={() => {
-            setIsZoomed(!isZoomed);
-          }}
+          onClick={() => handleClick()}
         >
-          zoom
+          {isZoomed ? "zoom out" : "zoom in"}
         </button>
       </figure>
 
       {isZoomed && (
         <div
-          className="bg-cover bg-center absolute inset-0 w-full z-0"
+          className="bg-contain bg-center absolute inset-0 w-full z-0"
           style={{ backgroundImage: `url('https://gif.land/${item.url}')` }}
         ></div>
       )}
