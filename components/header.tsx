@@ -5,7 +5,7 @@ import { Search } from "./search";
 export const Header = () => (
   <nav
     role="navigation"
-    className="flex md:flex-row items-end justify-between gap-3 sticky top-0 bg-white dark:bg-neutral-950 pt-2"
+    className="flex md:flex-row items-end justify-between gap-3 sticky top-0 bg-white dark:bg-neutral-950 pt-2 sm:px-4 lg:px-8 -mx-2 px-2 sm:-mx-4 lg:-mx-8 z-50 mix-blend-lighten hover:mix-blend-normal"
   >
     <h1 className="mr-auto">
       <Link
