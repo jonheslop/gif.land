@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { fave } from "@/lib/turso";
 import { createZoomedCookie, deleteZoomedCookie } from "@/app/actions";
+import { EnterFullScreenIcon, ExitFullScreenIcon } from "@radix-ui/react-icons";
 
 export const InfoImage = ({
   item,
@@ -42,10 +43,20 @@ export const InfoImage = ({
           priority={true}
         />
         <button
-          className={`absolute top-2 left-2 z-10 px-2 h-12 pb-px bg-emerald-500 dark:bg-emerald-800 text-white hover:bg-emerald-700 focus:bg-emerald-700 transition-colors flex items-center leading-none rounded ${isZoomed ? "mix-blend-difference" : ""}`}
+          className={`absolute top-2 left-2 z-10 px-2 size-12 pb-px bg-emerald-500 dark:bg-emerald-800 text-white hover:bg-emerald-700 focus:bg-emerald-700 transition-colors flex justify-center items-center leading-none rounded ${isZoomed ? "mix-blend-difference" : ""}`}
           onClick={() => handleClick()}
         >
-          {isZoomed ? "zoom out" : "zoom in"}
+          {isZoomed ? (
+            <>
+              <ExitFullScreenIcon className="size-6" />
+              <span className="sr-only">Exit full screen</span>
+            </>
+          ) : (
+            <>
+              <EnterFullScreenIcon className="size-6" />
+              <span className="sr-only">Enter full screen</span>
+            </>
+          )}
         </button>
       </figure>
 
