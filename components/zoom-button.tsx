@@ -51,7 +51,7 @@ export const InfoImage = ({ item }: { item: fave }) => {
 
       {isZoomed && (
         <div
-          className="bg-contain bg-center absolute inset-0 w-full z-0"
+          className="bg-contain bg-center fixed inset-0 w-full z-0"
           style={{ backgroundImage: `url('https://gif.land/${item.url}')` }}
         ></div>
       )}
