@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { InfoImage } from "@/components/zoom-button";
+import { cookies } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -33,6 +34,9 @@ export default async function Page({
   );
   const faves = rows as fave[];
 
+  const cookieStore = await cookies();
+  const hasZoomedCookie = cookieStore.has("zoomed");
+
   const item = faves[0];
 
   if (!item) {
@@ -46,7 +50,10 @@ export default async function Page({
 
   return (
     <div className="flex flex-col lg:grid grid-cols-4 gap-4 lg:gap-8 xl:mt-4">
-      <InfoImage item={JSON.parse(JSON.stringify(item))} />
+      <InfoImage
+        zoomed={hasZoomedCookie}
+        item={JSON.parse(JSON.stringify(item))}
+      />
       <Suspense
         fallback={
           <p className="mt-8 text-3xl text-neutral-500 animate-pulse tracking-tight leading-relaxed">

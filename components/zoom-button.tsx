@@ -1,28 +1,28 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { fave } from "@/lib/turso";
+import { createZoomedCookie, deleteZoomedCookie } from "@/app/actions";
 
-export const InfoImage = ({ item }: { item: fave }) => {
-  const [isZoomed, setIsZoomed] = useState(false);
+export const InfoImage = ({
+  item,
+  zoomed,
+}: {
+  item: fave;
+  zoomed: boolean;
+}) => {
+  const [isZoomed, setIsZoomed] = useState(zoomed);
   const isPortrait = item.width < item.height;
   const widthLessThan380 = item.width < 380;
-
-  useEffect(() => {
-    const saved = localStorage.getItem("isZoomed");
-    if (saved === "true") {
-      setIsZoomed(true);
-    }
-  }, []);
 
   const handleClick = () => {
     setIsZoomed(!isZoomed);
 
     if (!isZoomed) {
-      localStorage.setItem("isZoomed", "true");
+      createZoomedCookie();
     } else {
-      localStorage.removeItem("isZoomed");
+      deleteZoomedCookie();
     }
   };
 
