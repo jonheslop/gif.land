@@ -3,6 +3,7 @@ import Script from "next/script";
 import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { VercelAnalytics, VercelSpeedInsights } from "@/components/analytics";
 import "./globals.css";
 
 const soehne = localFont({
@@ -51,6 +52,8 @@ export default function RootLayout({
           async
           src="https://cursor-party.jonheslop.partykit.dev/cursors.js"
         />
+        <VercelAnalytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
