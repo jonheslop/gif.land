@@ -44,8 +44,6 @@ export const UploadForm = () => {
     setDimensions({ width: target.naturalWidth, height: target.naturalHeight });
   };
 
-  console.log(state);
-
   useEffect(() => {
     if (state.redirectUrl) {
       router.push(state.redirectUrl);
