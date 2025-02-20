@@ -6,7 +6,6 @@ export const authOptions: NextAuthOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
-      // Add redirectUri so can use diff one locally to in prod
     }),
   ],
 };

@@ -4,6 +4,8 @@ import { cookies } from "next/headers";
 import { turso } from "@/lib/turso";
 import type { UploadFormData, ActionResponse } from "../components/upload-form";
 import { z } from "zod";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
 
 export async function createZoomedCookie() {
   (await cookies()).set("zoomed", "true");
@@ -25,6 +27,15 @@ export async function upload(
   prevState: ActionResponse | null,
   formData: FormData,
 ): Promise<ActionResponse> {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return {
+      success: false,
+      message: "You must be logged in to upload",
+    };
+  }
+
   try {
     const rawData: UploadFormData = {
       image: formData.get("image") as File,
