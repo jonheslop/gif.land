@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
         pathname: "/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        port: "",
+        pathname: "/u/**",
+        search: "?v=4",
+      },
     ],
   },
   rewrites: async () => {
@@ -23,6 +30,12 @@ const nextConfig: NextConfig = {
         destination: "https://home.gif.land/_vercel/speed-insights/:match*",
       },
     ];
+  },
+  experimental: {
+    authInterrupts: true,
+    serverActions: {
+      bodySizeLimit: "10mb",
+    },
   },
 };
 
