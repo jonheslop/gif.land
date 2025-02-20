@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { UploadForm } from "@/components/upload-form";
 import { StyledLink as Link } from "@/components/link";
 

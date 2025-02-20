@@ -2,7 +2,7 @@ import Link from "next/link";
 import { NavLink } from "@/components/nav-link";
 import { Search } from "./search";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import Image from "next/image";
 
 export const Header = async () => {
