@@ -1,6 +1,6 @@
-import { turso, type fave } from "@/lib/turso";
 import { Grid } from "@/components/grid";
 import { allFavesToPages } from "@/lib/helpers";
+import { getPosts } from "@/lib/turso";
 
 export default async function Search({
   params,
@@ -10,11 +10,10 @@ export default async function Search({
   const query = (await params).query;
 
   const decodedQuery = decodeURI(query);
-
-  const { rows } = await turso.execute(
+  const faves = await getPosts(
     `SELECT * FROM favourites WHERE URL LIKE '%${decodedQuery}%' OR TAGS LIKE '%${decodedQuery}%'`,
   );
-  const faves = rows as fave[];
+
   const pagedFaves = allFavesToPages(faves);
 
   return (
