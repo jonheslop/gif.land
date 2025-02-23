@@ -8,10 +8,6 @@ import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth/next";
 import { revalidateTag } from "next/cache";
 
-export default async function invalidateCache() {
-  revalidateTag("faves");
-}
-
 export async function createZoomedCookie() {
   (await cookies()).set("zoomed", "true");
 }
