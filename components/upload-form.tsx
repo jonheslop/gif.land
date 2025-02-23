@@ -54,7 +54,7 @@ export const UploadForm = () => {
     <div className="flex gap-6 mt-6 items-start">
       <Form
         action={action}
-        className="flex flex-col items-start gap-6 max-w-sm w-full bg-neutral-100 p-4 rounded"
+        className="flex flex-col items-start gap-6 max-w-sm w-full bg-neutral-100 dark:bg-neutral-800 p-4 rounded"
       >
         <fieldset className="flex flex-col gap-px w-full">
           <label htmlFor="image" className="sr-only">
