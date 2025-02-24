@@ -6,6 +6,7 @@ import type { UploadFormData, ActionResponse } from "../components/upload-form";
 import { z } from "zod";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth/next";
+import { revalidateTag } from "next/cache";
 
 export async function createZoomedCookie() {
   (await cookies()).set("zoomed", "true");
@@ -77,6 +78,8 @@ export async function upload(
     if (result.rowsAffected !== 1) {
       throw new Error("Failed to add meta to Turso DB");
     }
+
+    revalidateTag("faves");
 
     return {
       success: true,
