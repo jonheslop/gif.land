@@ -44,9 +44,10 @@ export const Header = async () => {
           <Search />
         </li>
         {session && session.user?.image && (
-          <li>
+          <li className="absolute top-1 right-2 sm:right-4 lg:right-8 lg:top-2">
             <Link href="/add" title="Add new gifs">
               <Image
+                className="rounded-full"
                 src={session.user?.image}
                 alt={session.user?.name || "User avatar"}
                 width={24}
