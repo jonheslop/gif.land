@@ -54,7 +54,7 @@ export const UploadForm = () => {
     <div className="flex gap-6 mt-6 items-start">
       <Form
         action={action}
-        className="flex flex-col items-start gap-6 max-w-sm w-full bg-neutral-100 dark:bg-neutral-800 p-4 rounded"
+        className="flex flex-col items-start gap-6 max-w-sm w-full bg-neutral-100 dark:bg-neutral-800 p-4 rounded-sm"
       >
         <fieldset className="flex flex-col gap-px w-full">
           <label htmlFor="image" className="sr-only">
@@ -77,7 +77,7 @@ export const UploadForm = () => {
             )}
           </label>
           <input
-            className="border p-2 rounded-sm"
+            className="border p-2 rounded-xs"
             type="text"
             name="tags"
             placeholder="tags"
@@ -91,7 +91,7 @@ export const UploadForm = () => {
             )}
           </label>
           <input
-            className="border p-2 rounded-sm"
+            className="border p-2 rounded-xs"
             type="text"
             name="source"
             placeholder="source"
@@ -101,7 +101,7 @@ export const UploadForm = () => {
         <button
           type="submit"
           disabled={isPending}
-          className="px-4 h-12 pb-px bg-emerald-500 dark:bg-emerald-800 text-white hover:bg-emerald-700 focus:bg-emerald-700 transition-colors flex items-center leading-none rounded"
+          className="px-4 h-12 pb-px bg-emerald-500 dark:bg-emerald-800 text-white hover:bg-emerald-700 focus:bg-emerald-700 transition-colors flex items-center leading-none rounded-sm"
         >
           {isPending ? "Uploading..." : "Add now"}
         </button>

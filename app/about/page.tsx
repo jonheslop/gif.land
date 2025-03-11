@@ -117,7 +117,7 @@ export default function About() {
           </code>
         </p>
         <Link
-          className="underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500"
+          className="underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-500"
           href="/"
         >
           Get back to the gifs &raquo;

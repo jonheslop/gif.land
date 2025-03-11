@@ -25,7 +25,7 @@ export const Item = ({ item }: { item: fave }) => {
             </Link>
           </p>
           <Link
-            className="hover:underline underline-offset-2 hover:text-emerald-700 hover:dark:text-emerald-500 text-sm leading-none hidden group-hover:block"
+            className="hover:underline underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-500 text-sm leading-none hidden group-hover:block"
             href={`/info/${item.url}`}
           >
             # <span className="sr-only">Info</span>

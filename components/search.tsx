@@ -35,7 +35,7 @@ export const Search = () => {
           if (searchTerm !== "") e.target.form?.submit();
           e.target.classList.remove("flash");
         }}
-        className="border-b focus:border-neutral-900 ring-0 outline-none appearance-none dark:bg-neutral-950 rounded-none w-20 sm:w-auto"
+        className="border-b focus:border-neutral-900 ring-0 outline-hidden appearance-none dark:bg-neutral-950 rounded-none w-20 sm:w-auto"
       />
     </form>
   );

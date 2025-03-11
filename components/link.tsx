@@ -8,7 +8,7 @@ type StyledLinkProps = {
 export const StyledLink = ({ href, children, ...props }: StyledLinkProps) => {
   return (
     <Link
-      className="underline hover:text-emerald-700 hover:dark:text-emerald-500"
+      className="underline hover:text-emerald-700 dark:hover:text-emerald-500"
       href={href}
       {...props}
     >

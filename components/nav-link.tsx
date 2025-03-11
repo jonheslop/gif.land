@@ -17,8 +17,8 @@ export const NavLink = ({
       href={href}
       className={`underline-offset-2 ${
         currentRoute === href
-          ? "underline hover:text-emerald-700 hover:dark:text-emerald-500"
-          : "hover:underline hover:text-emerald-700 hover:dark:text-emerald-500"
+          ? "underline hover:text-emerald-700 dark:hover:text-emerald-500"
+          : "hover:underline hover:text-emerald-700 dark:hover:text-emerald-500"
       }`}
     >
       {children}
